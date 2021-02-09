@@ -1,0 +1,67 @@
+.ForumTop p{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5px;
+    margin-top: 7px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.ForumTop h4{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5px;
+    margin-top: 7px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.Forum{
+    display: block;
+}
+
+.Forum a{
+    color: white;
+}
+
+.Forum a:hover{
+    color: lightslategray;
+}
+
+.Forum a:visited{
+    color: white;
+}
+
+.Forum a:active{
+    color: lightslategray;
+}
+
+.forum-header{
+    display: flex;
+}
+
+.forum-header img{
+    height: 50px;
+    width: 50px;
+    padding: 8px;
+}
+
+.forum-details{
+    display: block;
+}
+
+.forum-details h4{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+.forum-details p{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+.forum-info{
+    display: inline-block;
+}

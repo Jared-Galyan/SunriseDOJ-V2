@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="main-container">
+    <div class="left-column">
+        {% for category in categories %}
+            <div id="forum-main">
+                <div class="left-top">
+                    <div class="ForumTop">
+                        <h4>{{ category.name }}</h4>
+                        <p>Recent Post</p>
+                        <p>Posts</p>
+                        <p>Threads</p>
+                    </div>    
+                </div>
+                <div class="left-bottom">
+                    {% for forum in forums %}
+                        {% if forum.category.name == category.name %}
+                            <div class="Forum">
+                                <div class="forum-header">
+                                    <img src="/static/img/folder.png" alt="Avatar" id="forum-icon">
+                                    <div class="forum-details">
+                                        <h4><a href="http://localhost:8000/forums/{{ forum.category.id }}/{{ forum }}">{{ forum.name }}</a></h4>
+                                        <p>{{ forum.description }}</p>
+                                    </div>
+                                    <div class="forum-info">
+                                        <p>Recent Post</p>
+                                        <p>1</p>
+                                        <p>2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="right-column">
+        
+    </div>
+</div>
+{% endblock %}

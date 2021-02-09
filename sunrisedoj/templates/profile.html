@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div id="main-container">
+    <div id="profile-column">
+        <div id="profile-container">
+            <div id="profile-flex">
+                <div id="profile-pfp-container">
+                    {% if user_data.userprofile.pfp is None %}
+                        <img src="/static/img/Banner-01_2.jpeg" alt="Avatar" id="profile-pfp">
+                    {% else %}
+                        <img src="{{ user_data.userprofile.pfp.url }}" alt="Avatar" id="profile-pfp">
+                    {% endif %}
+                </div>
+                <div id="profile-title-container">
+                    <h1>{{ user_data.username }}</h1>
+                    <h3>{{ user_data.userprofile.bio }}</h3>
+                </div>
+            </div>
+        </div>
+        <div id="profile-container-bottom">
+            <div id="lowerLeftColumn">
+                <div id="roleContainer">
+                    <h3>User's Roles</h3>
+                    <hr>
+                    {% for role in user_data.userprofile.roles.all %}
+                        <div id="role" style="color: {{ role.color }}">{{ role.role }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
