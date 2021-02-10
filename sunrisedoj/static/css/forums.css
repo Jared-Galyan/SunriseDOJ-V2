@@ -65,3 +65,119 @@
 .forum-info{
     display: inline-block;
 }
+
+#wrap{
+    width: 100%;
+    background-color:#434343;
+    border-color:#707070;
+    border-style: solid;
+    border-width: thin;
+    height: 30px;
+}
+
+#wrap h4{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 4px;
+}
+
+table {
+    width: 100%;
+    color: white;
+}
+
+tr{
+    color: white;
+}
+
+tr.heading{
+    background-color:#434343;
+}
+
+#wrap-bottom{
+    width: 100%;
+    background-color: #363636;
+    border-color:#707070;
+    border-style: solid;
+    border-width: thin;
+    height:auto;
+    margin-bottom: 5px;
+}
+
+#wrap-bottom p{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: medium;
+    margin-top: -23px;
+}
+
+#wrap-bottom h4{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+#wrap-bottom h3{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: medium;
+}
+
+#c1{
+    width: 50%;
+    text-align: left;
+}
+
+#c2{
+    width: 20%;
+    text-align: center;
+}
+
+#c3{
+    width: 15%;
+    text-align: center;
+}
+
+#c4{
+    width: 15%;
+    text-align: center;
+}
+
+#c5{
+    width: 5%;
+}
+
+#c6{
+    width: 45%;
+    text-align: left;
+}
+
+#forum-icon {
+    height: 50px;
+    width: 50px;
+    padding: 4px;
+}
+
+#forumlink:link {
+    color: white;
+  }
+  
+  /* visited link */
+#forumlink:visited {
+color: white;
+}
+
+/* mouse over link */
+#forumlink:hover {
+color: #778899;
+}
+
+/* selected link */
+#forumlink:active {
+color: lightslategray;
+}

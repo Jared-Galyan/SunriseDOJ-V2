@@ -4,40 +4,72 @@
 <div class="main-container">
     <div class="left-column">
         {% for category in categories %}
-            <div id="forum-main">
-                <div class="left-top">
-                    <div class="ForumTop">
-                        <h4>{{ category.name }}</h4>
-                        <p>Recent Post</p>
-                        <p>Posts</p>
-                        <p>Threads</p>
-                    </div>    
-                </div>
-                <div class="left-bottom">
+            <div id='wrap'>
+                <table id='table-top'>
+                    <tr>
+                        <th id="c1"><h4>{{ category.name }}</h4></th>
+                        <th id="c2"><h4>Recent Post</h4></th>
+                        <th id="c3"><h4>Threads</h4></th>
+                        <th id="c4"><h4>Posts</h4></th>
+                    </tr>
+                </table>
+            </div>
+            <div id="wrap-bottom">
+                <table id='table-data'>
                     {% for forum in forums %}
                         {% if forum.category.name == category.name %}
-                            <div class="Forum">
-                                <div class="forum-header">
-                                    <img src="/static/img/folder.png" alt="Avatar" id="forum-icon">
-                                    <div class="forum-details">
-                                        <h4><a href="http://localhost:8000/forums/{{ forum.category.id }}/{{ forum }}">{{ forum.name }}</a></h4>
-                                        <p>{{ forum.description }}</p>
-                                    </div>
-                                    <div class="forum-info">
-                                        <p>Recent Post</p>
-                                        <p>1</p>
-                                        <p>2</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <tr>
+                                <td id="c5"><img src="/static/img/folder.png" alt="Avatar" id="forum-icon"></td>
+                                <td id="c6">
+                                    <h4><a href="http://localhost:8000/forums/{{ forum.category.id }}/{{ forum }}" id='forumlink'>{{ forum.name }}</a></h4>
+                                    <p>{{ forum.description }}</p>
+                                </td>
+                                <td id="c2"><h3>Awesome Post by me</h3></td>
+                                <td id="c3"><h3>{{ forum.threads }}</h3></td>
+                                <td id="c4"><h3>{{ forum.posts }}</h3></td>
+                            </tr>
                         {% endif %}
                     {% endfor %}
-                </div>
+                </table>
             </div>
         {% endfor %}
     </div>
     <div class="right-column">
-        
+        <div class="right-top">
+            <p>Top Contributors</p>
+        </div>
+        <div class="right-bottom">
+            <div id="TCUserList">
+                <div class="User">
+                    <img src="/static/img/Sunrise_DOJ-01_1.jpeg" alt="Avatar">
+                    <div class="user-details">
+                        <h4>Jared G</h4>
+                        <p>4 Posts</p>
+                    </div>
+                </div>
+                <div class="User">
+                    <img src="/static/img/Sunrise_DOJ-01_1.jpeg" alt="Avatar">
+                    <div class="user-details">
+                        <h4>Jared G</h4>
+                        <p>4 Posts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-top">
+            <p>Recent Posts</p>
+        </div>
+        <div class="right-bottom">
+            <div id="RPList">
+                <div class="Post">
+                    <img src="/static/img/Sunrise_DOJ-01_1.jpeg" alt="Avatar">
+                    <div class="post-details">
+                        <h4>My first post!</h4>
+                        <p>[DR] Jared G</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
